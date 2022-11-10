@@ -61,5 +61,12 @@ let ageIncrease = setInterval(() => {
     
 }, 5000)
 
-const nameValue = document.querySelector('#nameValue')
-console.log(nameValue)
+const form = document.querySelector('#form')
+
+form.addEventListener("submit", (event) => {
+    event.preventDefault()
+    const input = document.querySelector('#nameValue')
+    const finalName = document.querySelector('#finalName')
+    finalName.innerHTML = input.value
+    input.value = ''
+})
