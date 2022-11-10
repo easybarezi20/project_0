@@ -59,4 +59,4 @@ let ageIncrease = setInterval(() => {
     num += 1
     ageNum.innerHTML = num
     
-}, 1000)
+}, 5000)
