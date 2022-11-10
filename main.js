@@ -28,7 +28,7 @@ let sleepinessIncrease = setInterval(() => {
         clearInterval(hungerIncrease)
         
     }
-}, 1000)
+}, 3000)
 
 sleepBtn.addEventListener('click', () => {
     sleepNum.innerHTML = 0
@@ -46,8 +46,17 @@ let boredomIncrease = setInterval(() => {
         clearInterval(hungerIncrease)
         
     }
-}, 1000)
+}, 2000)
 
 boredomBtn.addEventListener('click', () => {
     boredomNum.innerHTML = 0
 })
+
+const ageNum = document.querySelector('#agenumber')
+
+let ageIncrease = setInterval(() => {
+    let num = parseInt(ageNum.innerHTML)
+    num += 1
+    ageNum.innerHTML = num
+    
+}, 1000)
