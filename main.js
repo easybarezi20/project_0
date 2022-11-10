@@ -33,3 +33,21 @@ let sleepinessIncrease = setInterval(() => {
 sleepBtn.addEventListener('click', () => {
     sleepNum.innerHTML = 0
 })
+
+const boredomNum = document.querySelector('#boredomnumber')
+const boredomBtn = document.querySelector('#playbutton')
+
+let boredomIncrease = setInterval(() => {
+    if(boredomNum.innerHTML < 10){
+    let num = parseInt(boredomNum.innerHTML)
+    num += 1
+    boredomNum.innerHTML = num
+    }else if (boredomNum.innerHTML === 10){
+        clearInterval(hungerIncrease)
+        
+    }
+}, 1000)
+
+boredomBtn.addEventListener('click', () => {
+    boredomNum.innerHTML = 0
+})
