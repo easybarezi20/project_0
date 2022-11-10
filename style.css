@@ -19,3 +19,7 @@ button{
 p{
     margin: 5px;
 }
+#name{
+    display: flex;
+    justify-content: center;
+}
