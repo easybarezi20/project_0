@@ -17,12 +17,15 @@ footer{
     text-align: center;
 }
 p{
-    margin: 5px;
+    margin: 3px;
 }
 #name{
     display: flex;
     justify-content: center;
 }
 #nameValue {
+    text-align: center;
+}
+form {
     text-align: center;
 }
