@@ -5,7 +5,7 @@ header {
 }
 
 button{
-    
+    margin: 10px;
     
 }
 
@@ -14,7 +14,7 @@ button{
     justify-content: center;
 }
 #btncontainer{
-    margin-left: 340px;
+    margin-left: 310px;
 }
 p{
     margin: 5px;
