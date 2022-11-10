@@ -60,3 +60,6 @@ let ageIncrease = setInterval(() => {
     ageNum.innerHTML = num
     
 }, 5000)
+
+const nameValue = document.querySelector('#nameValue')
+console.log(nameValue)

@@ -14,7 +14,7 @@ main {
     justify-content: center;
 }
 footer{
-    margin-left: 310px;
+    text-align: center;
 }
 p{
     margin: 5px;
@@ -22,4 +22,7 @@ p{
 #name{
     display: flex;
     justify-content: center;
+}
+#nameValue {
+    text-align: center;
 }
