@@ -9,11 +9,11 @@ button{
     
 }
 
-#image {
+main {
     display: flex;
     justify-content: center;
 }
-#btncontainer{
+footer{
     margin-left: 310px;
 }
 p{

@@ -17,7 +17,8 @@ hungerBtn.addEventListener('click', () => {
 })
 
 const sleepNum = document.querySelector('#sleepinessnumber')
-console.log(sleepNum)
+const sleepBtn =document.querySelector('#sleepbutton')
+
 let sleepinessIncrease = setInterval(() => {
     if(sleepNum.innerHTML < 10){
     let num = parseInt(sleepNum.innerHTML)
@@ -28,3 +29,7 @@ let sleepinessIncrease = setInterval(() => {
         
     }
 }, 1000)
+
+sleepBtn.addEventListener('click', () => {
+    sleepNum.innerHTML = 0
+})
