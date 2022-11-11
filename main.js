@@ -9,16 +9,18 @@ let hungerIncrease = setInterval(() => {
     let num = parseInt(hungerNum.innerHTML)
     num += 1
     hungerNum.innerHTML = num
-    }else if (hungerNum.innerHTML === 10){ 
+    }else if (hungerNum.innerHTML === '10'){ 
         first.textContent = ''
         last.textContent = 'you died!'
+        
         clearInterval(hungerIncrease)
     }
-}, 1000)
+}, 1000) 
 
 hungerBtn.addEventListener('click', () => {
     hungerNum.innerHTML = 0
-})
+        }    
+);
 
 const sleepNum = document.querySelector('#sleepinessnumber')
 const sleepBtn =document.querySelector('#sleepbutton')
@@ -36,7 +38,7 @@ let sleepinessIncrease = setInterval(() => {
         clearInterval(hungerIncrease)
         
     }
-}, 1000)
+}, 3000)
 
 sleepBtn.addEventListener('click', () => {
     sleepNum.innerHTML = 0
@@ -71,7 +73,7 @@ let ageIncrease = setInterval(() => {
     num += 1
     ageNum.innerHTML = num
     
-}, 5000)
+}, 10000)
 
 const form = document.querySelector('#form')
 
@@ -83,13 +85,11 @@ form.addEventListener("submit", (event) => {
     input.value = ''
 })
 
-// function death() {
-//     if(hungerNum.innerHTML === 10){
-//         let first = document.querySelector('#first')
-//          let last = document.querySelector('#last')
-//          first.textContent = ''
-//          last.textContent = 'you died!'
-//     }
-// }
-// death()
-// console.log(typeof hungerNum)
+function ifDeath(){
+    if (last.innerHTML === 'you died!'){
+        hungerNum.innerHTML = 0
+        sleepNum.innerHTML = 0
+        boredomNum.innerHTML = 0
+    }
+}
+console.log(last.innerHTML)
