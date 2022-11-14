@@ -83,7 +83,7 @@ form.addEventListener("submit", (event) => {
 function ifDeath(){
         first.textContent = ''
         last.textContent = 'you died!'
-        starter.innerHTML = 'Reload page to pay again!'
+        starter.innerHTML = 'Reload page to play again!'
         hungerNum.innerHTML = 0
         sleepNum.innerHTML = 0
         boredomNum.innerHTML = 0
