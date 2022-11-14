@@ -2,6 +2,7 @@ const hungerNum = document.querySelector('#hungerNumber')
 const hungerBtn = document.querySelector('#hungerbutton')
 let first = document.querySelector('#first')
 let last = document.querySelector('#last')
+let starter = document.querySelector('#starter')
 
 
 let hungerIncrease = setInterval(() => {
@@ -56,13 +57,15 @@ boredomBtn.addEventListener('click', () => {
 const ageNum = document.querySelector('#agenumber')
 
 let ageIncrease = setInterval(() => {
+    if(finalName.innerHTML != ''){
     let num = parseInt(ageNum.innerHTML)
     num += 1
     ageNum.innerHTML = num
-    if (last.innerHTML == 'you died!'){
-        clearInterval(ageIncrease)
+        if(last.innerHTML === 'you died!'){
+            clearInterval(ageIncrease)
+        }
     }
-}, 5000)
+}, 4000)
 
 const form = document.querySelector('#form')
 
@@ -77,11 +80,11 @@ form.addEventListener("submit", (event) => {
 function ifDeath(){
         first.textContent = ''
         last.textContent = 'you died!'
+        starter.innerHTML = 'Reload page to pay again!'
         hungerNum.innerHTML = 0
         sleepNum.innerHTML = 0
         boredomNum.innerHTML = 0
         clearInterval(sleepinessIncrease)
         clearInterval(hungerIncrease)
-        clearInterval(boredomIncrease)
-    
+        clearInterval(boredomIncrease)    
 }
