@@ -7,6 +7,7 @@ let starter = document.querySelector('#starter')
 
 let hungerIncrease = setInterval(() => {
     if(finalName.innerHTML != '' && hungerNum.innerHTML < 10){
+    gamestart()
     let num = parseInt(hungerNum.innerHTML)
     num += 1
     hungerNum.innerHTML = num
@@ -25,6 +26,7 @@ const sleepBtn =document.querySelector('#sleepbutton')
 
 let sleepinessIncrease = setInterval(() => {
     if(finalName.innerHTML != '' && sleepNum.innerHTML < 10){
+    gamestart()
     let num = parseInt(sleepNum.innerHTML)
     num += 1
     sleepNum.innerHTML = num
@@ -42,6 +44,7 @@ const boredomBtn = document.querySelector('#playbutton')
 
 let boredomIncrease = setInterval(() => {
     if(finalName.innerHTML != '' && boredomNum.innerHTML < 10){
+    gamestart()
     let num = parseInt(boredomNum.innerHTML)
     num += 1
     boredomNum.innerHTML = num
@@ -87,4 +90,7 @@ function ifDeath(){
         clearInterval(sleepinessIncrease)
         clearInterval(hungerIncrease)
         clearInterval(boredomIncrease)    
+}
+function gamestart(){
+    starter.innerHTML = 'If ANY number hits 10 you die!'
 }
