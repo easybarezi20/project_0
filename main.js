@@ -5,7 +5,7 @@ let last = document.querySelector('#last')
 
 
 let hungerIncrease = setInterval(() => {
-    if(hungerNum.innerHTML < 10){
+    if(finalName.innerHTML != '' && hungerNum.innerHTML < 10){
     let num = parseInt(hungerNum.innerHTML)
     num += 1
     hungerNum.innerHTML = num
@@ -26,16 +26,14 @@ const sleepNum = document.querySelector('#sleepinessnumber')
 const sleepBtn =document.querySelector('#sleepbutton')
 
 let sleepinessIncrease = setInterval(() => {
-    if(sleepNum.innerHTML < 10){
+    if(finalName.innerHTML != '' && sleepNum.innerHTML < 10){
     let num = parseInt(sleepNum.innerHTML)
     num += 1
     sleepNum.innerHTML = num
     }else if (sleepNum.innerHTML === '10'){
-        let first = document.querySelector('#first')
-        let last = document.querySelector('#last')
         first.textContent = ''
         last.textContent = 'you died!'
-        clearInterval(hungerIncrease)
+        clearInterval(sleepinessIncrease)
         
     }
 }, 3000)
@@ -48,16 +46,14 @@ const boredomNum = document.querySelector('#boredomnumber')
 const boredomBtn = document.querySelector('#playbutton')
 
 let boredomIncrease = setInterval(() => {
-    if(boredomNum.innerHTML < 10){
+    if(finalName.innerHTML != '' && boredomNum.innerHTML < 10){
     let num = parseInt(boredomNum.innerHTML)
     num += 1
     boredomNum.innerHTML = num
     }else if (boredomNum.innerHTML === '10'){
-        let first = document.querySelector('#first')
-        let last = document.querySelector('#last')
         first.textContent = ''
         last.textContent = 'you died!'
-        clearInterval(hungerIncrease)
+        clearInterval(boredomIncrease)
         
     }
 }, 2000)
@@ -72,8 +68,10 @@ let ageIncrease = setInterval(() => {
     let num = parseInt(ageNum.innerHTML)
     num += 1
     ageNum.innerHTML = num
-    
-}, 10000)
+    if (last.innerHTML == 'you died!'){
+        clearInterval(ageIncrease)
+    }
+}, 5000)
 
 const form = document.querySelector('#form')
 
