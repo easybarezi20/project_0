@@ -10,10 +10,7 @@ let hungerIncrease = setInterval(() => {
     num += 1
     hungerNum.innerHTML = num
     }else if (hungerNum.innerHTML === '10'){ 
-        first.textContent = ''
-        last.textContent = 'you died!'
-        
-        clearInterval(hungerIncrease)
+        ifDeath()       
     }
 }, 1000) 
 
@@ -31,10 +28,7 @@ let sleepinessIncrease = setInterval(() => {
     num += 1
     sleepNum.innerHTML = num
     }else if (sleepNum.innerHTML === '10'){
-        first.textContent = ''
-        last.textContent = 'you died!'
-        clearInterval(sleepinessIncrease)
-        
+        ifDeath()     
     }
 }, 3000)
 
@@ -51,10 +45,7 @@ let boredomIncrease = setInterval(() => {
     num += 1
     boredomNum.innerHTML = num
     }else if (boredomNum.innerHTML === '10'){
-        first.textContent = ''
-        last.textContent = 'you died!'
-        clearInterval(boredomIncrease)
-        
+        ifDeath()       
     }
 }, 2000)
 
@@ -84,10 +75,13 @@ form.addEventListener("submit", (event) => {
 })
 
 function ifDeath(){
-    if (last.innerHTML === 'you died!'){
+        first.textContent = ''
+        last.textContent = 'you died!'
         hungerNum.innerHTML = 0
         sleepNum.innerHTML = 0
         boredomNum.innerHTML = 0
-    }
+        clearInterval(sleepinessIncrease)
+        clearInterval(hungerIncrease)
+        clearInterval(boredomIncrease)
+    
 }
-console.log(last.innerHTML)
